@@ -1,7 +1,21 @@
+cargo-features = ["default-run"]
+
 [package]
 name = "first_project"
 version = "0.1.0"
 authors = ["ritt <margarita_fedotova@epam.com>"]
+autobins = false
+default-run = "lab3"
+
+[[bin]]
+name = "lab3"
+path = "src/lab3/main.rs"
+test = true
+
+[[bin]]
+name = "sortings"
+path = "src/sortings/main.rs"
+test = true
 
 [dependencies]
 text_io = "0.1.7"
