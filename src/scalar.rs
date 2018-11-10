@@ -12,3 +12,27 @@ pub fn compute_scalar(arr1: &[i32], arr2: &[i32]) -> i32 {
 
     return sum;
 }
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn scalar_for_equal_arrays() {
+        let arr1 = &[1, 2, 3];
+        let arr2 = &[1, 2, 3];
+        
+        let res = compute_scalar(arr1, arr2);
+        assert_eq!(res, 14);
+    }
+
+    #[test]
+    fn scalar_for_unequal_arrays() {
+        let arr1 = &[1, 2, 3];
+        let arr2 = &[1, 2, 3, 4, 5];
+        
+        let res = compute_scalar(arr1, arr2);
+        assert_eq!(res, 14);
+    }
+}
